@@ -23,7 +23,7 @@ export default function BasicMenu() {
         className="underline-offset-4 hover:underline"
         onClick={handleClick}
       >
-        Contact
+        Contact +
       </button>
       <Menu
         id="basic-menu"
@@ -35,26 +35,26 @@ export default function BasicMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link
-            href="https://www.facebook.com/profile.php?id=100094540248529"
-            target="_blank"
-          >
-            Facebook
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
           <Link href="https://twitter.com/xuedao_tw" target="_blank">
-            X / Twitter
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link href="#" target="_blank">
-            Telegram
+            X
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link href="https://www.instagram.com/xue_dao_/" target="_blank">
             Instagram
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="https://t.me/+0Rvawr400uNhNTY1" target="_blank">
+            Telegram
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link
+            href="https://www.facebook.com/profile.php?id=100094540248529"
+            target="_blank"
+          >
+            Facebook
           </Link>
         </MenuItem>
       </Menu>
