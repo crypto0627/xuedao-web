@@ -12,7 +12,6 @@ const withPWA = withPWAInit({
 });
 
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   webpack: config => {
