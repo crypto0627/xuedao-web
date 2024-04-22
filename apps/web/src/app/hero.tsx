@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
-
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export function Hero() {
   return (
-    <section className="mt-4 w-full bg-black py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48">
+    <section className="w-full bg-cover bg-center py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48" style={{ backgroundImage: 'url(/hero-bg.png)' }}>
       <div className="flex flex-col items-center justify-between gap-x-8 px-8 sm:flex-row sm:px-12 md:px-24 lg:px-32 xl:px-48">
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold text-white sm:text-5xl xl:text-8xl/none">
@@ -16,8 +15,8 @@ export function Hero() {
           <p className="max-w-[600px] text-white md:text-2xl/relaxed">
             Our mission is to break down barriers, foster global connections
             among students, ignite a deep passion for learning, and promote a
-            vibrant culture of knowledge sharing for both students and lifelong
-            learners.
+            vibrant culture of knowledge sharing for both students and
+            lifelong learners.
           </p>
           <div className="mt-8 flex flex-col gap-2 min-[400px]:flex-row sm:flex-row">
             <div className="flex flex-row gap-2">
@@ -44,15 +43,16 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div className="mt-8 flex flex-col sm:mt-0">
+        <div className="mt-8 flex justify-center items-center border border-blue-400 rounded-xl overflow-hidden opacity-70">
           <Image
-            src="/logo-square.png"
+            src="/logo-test.png"
             width={1000}
             height={1000}
-            alt="XueDAO square logo"
+            alt="XueDAO logo"
+            priority
           />
         </div>
       </div>
     </section>
-  );
+  )
 }

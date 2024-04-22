@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 
 import Image from "next/image";
@@ -9,6 +10,7 @@ import {
   Code as CodeIcon,
   Close as CloseIcon,
   Menu as MenuIcon,
+  Book as BookIcon,
 } from "@mui/icons-material";
 import {
   AppBar,
@@ -23,12 +25,14 @@ import {
   ListItemText,
   Box,
 } from "@mui/material";
+import { NavbarItemType } from "@/models/types/uiTypes";
 
-const NAV_MENU = [
+const NAV_MENU: NavbarItemType[] = [
   {
-    name: "Home",
+    name: "Learn",
     icon: <WebIcon />,
     href: "/",
+    target: "",
   },
   {
     name: "Events",
@@ -40,10 +44,11 @@ const NAV_MENU = [
     name: "Hackathon",
     icon: <CodeIcon />,
     href: "/hackathon",
+    target: "",
   },
   {
-    name: "Blog",
-    icon: <CodeIcon />,
+    name: "Community",
+    icon: <BookIcon />,
     href: "https://medium.com/xuedao",
     target: "_blank",
   },
@@ -73,7 +78,7 @@ export function NavbarTest() {
   }, []);
 
   return (
-    <AppBar position="sticky" color="transparent" elevation={0}>
+    <AppBar position="sticky" color="transparent" elevation={0} style={{ backgroundImage: 'url(/hero-bg.png)' }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <Link href="/">
@@ -96,7 +101,7 @@ export function NavbarTest() {
         >
           {NAV_MENU.map(({ name, icon: Icon, href, target }) => (
             <Link key={name} href={href} target={target} passHref>
-              <Button color="inherit" startIcon={Icon}>
+              <Button color="inherit" startIcon={Icon} className="text-white bg-slate-500 rounded-full">
                 {name}
               </Button>
             </Link>
@@ -113,6 +118,7 @@ export function NavbarTest() {
               color="inherit"
               variant="outlined"
               endIcon={<AccountCircleIcon />}
+              className="text-white bg-slate-500 rounded-full"
             >
               Join Us
             </Button>

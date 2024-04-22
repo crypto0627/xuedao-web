@@ -4,17 +4,16 @@ import React from "react";
 
 export function Vision() {
   return (
-    <section id="vision" className="w-full bg-white py-12 md:py-24 lg:py-32">
+    <section id="vision" className="w-full bg-cover bg-center py-12 md:py-24 lg:py-32" style={{ backgroundImage: 'url(/vision-bg.png)' }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2
-              className="text-3xl font-bold text-black sm:text-6xl"
-              id="why-join"
+              className="text-3xl font-bold text-white sm:text-6xl"
             >
               Why Join XueDAO?
             </h2>
-            <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               As a member of XueDAO, you'll have access to a wide range of
               resources and benefits designed to help you succeed in the world
               of Web3.
