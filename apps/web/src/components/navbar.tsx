@@ -54,7 +54,7 @@ const NAV_MENU: NavbarItemType[] = [
   },
 ];
 
-export function NavbarTest() {
+export function Navbar() {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen((cur) => !cur);
@@ -78,17 +78,18 @@ export function NavbarTest() {
   }, []);
 
   return (
-    <AppBar position="sticky" color="transparent" elevation={0} style={{ backgroundImage: 'url(/hero-bg.png)' }}>
+    <AppBar position="sticky" color="transparent" elevation={0} className="bg-xuedao_pink">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <Link href="/">
+          <Link href="/" >
             <Image
               src="/XD_logo.png"
               alt="Xue DAO logo"
               width={100}
               height={100}
+              style={{ width: "100px", height: "auto" }}
+              priority
             />
-            <span className="sr-only">XueDAO</span>
           </Link>
         </Typography>
         <Box
@@ -101,7 +102,7 @@ export function NavbarTest() {
         >
           {NAV_MENU.map(({ name, icon: Icon, href, target }) => (
             <Link key={name} href={href} target={target} passHref>
-              <Button color="inherit" startIcon={Icon} className="text-white bg-slate-500 rounded-full">
+              <Button color="inherit" startIcon={Icon} className="rounded-full">
                 {name}
               </Button>
             </Link>
@@ -118,7 +119,7 @@ export function NavbarTest() {
               color="inherit"
               variant="outlined"
               endIcon={<AccountCircleIcon />}
-              className="text-white bg-slate-500 rounded-full"
+              className="rounded-full"
             >
               Join Us
             </Button>
@@ -139,7 +140,7 @@ export function NavbarTest() {
           {NAV_MENU.map(({ name, icon: Icon, href, target }) => (
             <Link key={name} href={href} target={target} passHref>
               <Box sx={{ display: "block", textAlign: "left", pt: 1 }}>
-                <ListItem button onClick={handleOpen}>
+                <ListItem onClick={handleOpen}>
                   <ListItemIcon>{Icon}</ListItemIcon>
                   <ListItemText primary={name} />
                 </ListItem>
@@ -167,4 +168,4 @@ export function NavbarTest() {
   );
 }
 
-export default NavbarTest;
+export default Navbar;

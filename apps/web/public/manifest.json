@@ -190,33 +190,9 @@
             "purpose": "any"
         },
         {
-            "src": "/hero-bg.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/contributors-bg.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/vision-bg.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/swiper-bg.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/logo-test.png",
-            "sizes": "512x512",
-            "type": "image/png",
+            "src": "/icons-discord.svg",
+            "sizes": "144x144",
+            "type": "image/svg",
             "purpose": "any"
         }
     ],

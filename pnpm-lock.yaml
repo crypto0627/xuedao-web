@@ -27,23 +27,17 @@ importers:
         specifier: ^10.2.6
         version: 10.2.6(next@14.2.2)(webpack@5.91.0)
       '@emotion/react':
-        specifier: ^11.11.3
+        specifier: ^11.11.4
         version: 11.11.4(@types/react@18.2.79)(react@18.2.0)
       '@emotion/styled':
-        specifier: ^11.11.0
+        specifier: ^11.11.5
         version: 11.11.5(@emotion/react@11.11.4)(@types/react@18.2.79)(react@18.2.0)
       '@mui/icons-material':
         specifier: ^5.15.15
         version: 5.15.15(@mui/material@5.15.15)(@types/react@18.2.79)(react@18.2.0)
       '@mui/material':
-        specifier: ^5.15.5
+        specifier: ^5.15.15
         version: 5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0)
-      '@splinetool/react-spline':
-        specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.1.3)(react-dom@18.2.0)(react@18.2.0)
-      '@splinetool/runtime':
-        specifier: ^1.1.3
-        version: 1.1.3
       next:
         specifier: 14.2.2
         version: 14.2.2(@babel/core@7.24.4)(react-dom@18.2.0)(react@18.2.0)
@@ -54,8 +48,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-swipeable-views:
-        specifier: ^0.14.0
-        version: 0.14.0(react@18.2.0)
+        specifier: npm:@gromy/react-swipeable-views@^0.15.1
+        version: /@gromy/react-swipeable-views@0.15.1(react@18.2.0)
       react-swipeable-views-react-18-fix:
         specifier: ^0.14.1
         version: 0.14.1(react@18.2.0)
@@ -78,6 +72,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.2.25
+      '@types/react-lifecycles-compat':
+        specifier: ^3.0.4
+        version: 3.0.4
       '@types/react-swipeable-views':
         specifier: ^0.13.5
         version: 0.13.5
@@ -94,7 +91,7 @@ importers:
         specifier: ^6.19.0
         version: 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       autoprefixer:
-        specifier: ^10.0.1
+        specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: ^8.56.0
@@ -106,7 +103,7 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
       postcss:
-        specifier: ^8
+        specifier: ^8.4.38
         version: 8.4.38
       prettier:
         specifier: ^3.2.4
@@ -114,8 +111,11 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.5.11
         version: 0.5.14(@trivago/prettier-plugin-sort-imports@4.3.0)(prettier@3.2.5)
+      react-lifecycles-compat:
+        specifier: ^3.0.4
+        version: 3.0.4
       tailwindcss:
-        specifier: ^3.3.0
+        specifier: ^3.4.3
         version: 3.4.3
       typescript:
         specifier: ^5.3.3
@@ -2015,6 +2015,42 @@ packages:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
     dev: false
 
+  /@gromy/react-swipeable-views-core@0.15.1:
+    resolution: {integrity: sha512-wKcBKaLEPhC6CRqIKFW3ZonZCjkyOawfkwQhh9oqrZHgv/W2iPpVMMEIB27elyEgb8b5RgqJtp6o1vxuSO7/cA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@babel/runtime': 7.0.0
+      warning: 4.0.3
+    dev: false
+
+  /@gromy/react-swipeable-views-utils@0.15.1(react@18.2.0):
+    resolution: {integrity: sha512-fVn/MMzgW2wdB+EVmaBYLK/BOXzZKaJ6yCM0luZRwCU4/8OAuWHah0MGbCXiZDSfpvsFyVWYNp0zOT3os8HlAA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@babel/runtime': 7.0.0
+      '@gromy/react-swipeable-views-core': 0.15.1
+      keycode: 2.2.1
+      prop-types: 15.8.1
+      react-event-listener: 0.6.6(react@18.2.0)
+      shallow-equal: 1.2.1
+    transitivePeerDependencies:
+      - react
+    dev: false
+
+  /@gromy/react-swipeable-views@0.15.1(react@18.2.0):
+    resolution: {integrity: sha512-At2d4SkQpqwAgENeBsixH0pTPteadi01Tl4b4HN+OpV10+6KMmZSVkMTQvYgZ4xiKLB7dCr74jyCJgRFwylzUw==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      react: ^15.3.0 || ^16.0.0 || ^17.0.0
+    dependencies:
+      '@babel/runtime': 7.0.0
+      '@gromy/react-swipeable-views-core': 0.15.1
+      '@gromy/react-swipeable-views-utils': 0.15.1(react@18.2.0)
+      prop-types: 15.8.1
+      react: 18.2.0
+      warning: 4.0.3
+    dev: false
+
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -3014,27 +3050,6 @@ packages:
     resolution: {integrity: sha512-yfORGUIPgLck41qyN7nbwJRAx17/jAIXCTanHOJZhB6PJ1iAk/84b/xlsVKFSyNyLXIj0dhppoE0+CRws7wlzA==}
     dev: true
 
-  /@splinetool/react-spline@2.2.6(@splinetool/runtime@1.1.3)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-y9L2VEbnC6FNZZu8XMmWM9YTTTWal6kJVfP05Amf0QqDNzCSumKsJxZyGUODvuCmiAvy0PfIfEsiVKnSxvhsDw==}
-    peerDependencies:
-      '@splinetool/runtime': '*'
-      react: '>=17.0.0'
-      react-dom: '>=17.0.0'
-    dependencies:
-      '@splinetool/runtime': 1.1.3
-      lodash.debounce: 4.0.8
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-merge-refs: 2.1.1
-    dev: false
-
-  /@splinetool/runtime@1.1.3:
-    resolution: {integrity: sha512-mkKaSl0kDAPn7mNfUk1OSy0izavEB+QpFNmE3AHfGQKGczc+5gjmnVod8vxDpgRn49XZCo7OAXxUifLBfpSecg==}
-    dependencies:
-      on-change: 4.0.2
-      semver-compare: 1.0.0
-    dev: false
-
   /@surma/rollup-plugin-off-main-thread@2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
     dependencies:
@@ -3245,6 +3260,12 @@ packages:
 
   /@types/react-dom@18.2.25:
     resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
+    dependencies:
+      '@types/react': 18.2.79
+    dev: true
+
+  /@types/react-lifecycles-compat@3.0.4:
+    resolution: {integrity: sha512-1CM48Y9ztL5S4wjt7DK2izrkgPp/Ql0zCJu/vHzhgl7J+BD4UbSGjHN1M2TlePms472JvOazUtAO1/G3oFZqIQ==}
     dependencies:
       '@types/react': 18.2.79
     dev: true
@@ -7419,11 +7440,6 @@ packages:
     resolution: {integrity: sha512-lgHwxlxV1qIg1Eap7LgIeoBWIMFibOjbrYPIPJZcI1mmGAI2m3lNYpK12Y+GBdPQ0U1hRwSord7GIaawz962qQ==}
     dev: true
 
-  /on-change@4.0.2:
-    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
-
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -7892,9 +7908,9 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
-  /react-merge-refs@2.1.1:
-    resolution: {integrity: sha512-jLQXJ/URln51zskhgppGJ2ub7b2WFKGq3cl3NYKtlHoTG+dN2q7EzWrn3hN3EgPsTMvpR9tpq5ijdp7YwFZkag==}
-    dev: false
+  /react-lifecycles-compat@3.0.4:
+    resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
+    dev: true
 
   /react-swipeable-views-core-react-18-fix@0.14.0(react@18.2.0):
     resolution: {integrity: sha512-bjFcup9b46doTcqgO7JAPBrWW1iJ3gklg5zOjJ067jxn4kzOO287LFM0nzFA1l4Gu0XM73vzCKmYzMl7+6Ft6Q==}
@@ -7956,20 +7972,6 @@ packages:
       shallow-equal: 1.2.1
     transitivePeerDependencies:
       - react
-    dev: false
-
-  /react-swipeable-views@0.14.0(react@18.2.0):
-    resolution: {integrity: sha512-wrTT6bi2nC3JbmyNAsPXffUXLn0DVT9SbbcFr36gKpbaCgEp7rX/OFxsu5hPc/NBsUhHyoSRGvwqJNNrWTwCww==}
-    engines: {node: '>=6.0.0'}
-    peerDependencies:
-      react: ^15.3.0 || ^16.0.0 || ^17.0.0
-    dependencies:
-      '@babel/runtime': 7.0.0
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-swipeable-views-core: 0.14.0
-      react-swipeable-views-utils: 0.14.0(react@18.2.0)
-      warning: 4.0.3
     dev: false
 
   /react-transition-group@4.4.5(react-dom@18.2.0)(react@18.2.0):
@@ -8354,10 +8356,6 @@ packages:
       node-addon-api: 2.0.2
       node-gyp-build: 4.8.0
     dev: true
-
-  /semver-compare@1.0.0:
-    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
-    dev: false
 
   /semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}

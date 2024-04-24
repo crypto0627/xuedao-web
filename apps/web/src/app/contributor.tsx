@@ -1,9 +1,7 @@
 "use client";
 
 import React from "react";
-
 import { Avatar, Grid, Typography, Box, Paper } from "@mui/material";
-
 import { MemberType } from "@/models/types/uiTypes";
 
 export function Contributors() {
@@ -23,14 +21,10 @@ export function Contributors() {
   ];
 
   return (
-    <section className="w-full bg-cover bg-center py-12 md:py-24 lg:py-32" style={{ backgroundImage: 'url(/contributors-bg.png)' }}>
+    <section className="w-full bg-cover bg-center bg-xuedao_pink py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold text-white sm:text-6xl">
-              Core Contributors
-            </h2>
-          </div>
+        <div className="flex flex-col items-center justify-center space-y-4 text-center text-3xl font-bold sm:text-6xl">
+            Core Contributors
         </div>
         <div className="mt-8">
           <Grid
@@ -61,7 +55,6 @@ export function Contributors() {
                     variant="h6"
                     component="h3"
                     sx={{ fontWeight: "medium", color: "text.primary" }}
-                    className="text-white"
                   >
                     {members[id].name}
                   </Typography>

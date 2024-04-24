@@ -6,6 +6,7 @@ export type MemberType = {
 };
 
 export type ImageType = {
+  index: number;
   imgPath: string;
   label: string;
 };
