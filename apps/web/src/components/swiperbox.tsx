@@ -47,14 +47,7 @@ export function ReactSwipeableViews() {
   <Typography variant="h3" className="text-3xl font-bold sm:text-6xl">
     Highlights
   </Typography>
-  <Box
-    sx={{
-      position: "absolute",
-      left: 0,
-      top: "50%",
-      transform: "translateY(-50%)",
-    }}
-  >
+  <Box className="flex items-center justify-between w-full">
     <IconButton
       aria-label="left"
       onClick={handleBackClick}
@@ -63,41 +56,31 @@ export function ReactSwipeableViews() {
     >
       <ChevronLeft />
     </IconButton>
-  </Box>
-  <SwipeableViewsVirtualize
-    index={index}
-    onChangeIndex={handleChangeIndex}
-    slideCount={images.length}
-    slideRenderer={({ index: imageIndex, key }) => {
-      const image = images.find((img) => img.index === imageIndex + 1);
-      return (
-        <div key={key} className="items-center align-middle justify-center flex">
-          {image && (
-            <div className="overflow-hidden border-white border-4 hover:border-purple-300 rounded-3xl">
-              <Image
-                src={image.imgPath}
-                alt={image.label}
-                width={800}
-                height={600}
-                priority
-              />
-            </div>
-          )}
-        </div>
-      );
-    }}
-    axis="x"
-    enableMouseEvents
-  />
-
-  <Box
-    sx={{
-      position: "absolute",
-      right: 0,
-      top: "50%",
-      transform: "translateY(-50%)",
-    }}
-  >
+    <SwipeableViewsVirtualize
+      index={index}
+      onChangeIndex={handleChangeIndex}
+      slideCount={images.length}
+      slideRenderer={({ index: imageIndex, key }) => {
+        const image = images.find((img) => img.index === imageIndex + 1);
+        return (
+          <div key={key} className="items-center align-middle justify-center flex">
+            {image && (
+              <div className="overflow-hidden border-white border-4 rounded-3xl">
+                <Image
+                  src={image.imgPath}
+                  alt={image.label}
+                  width={800}
+                  height={600}
+                  priority
+                />
+              </div>
+            )}
+          </div>
+        );
+      }}
+      axis="x"
+      enableMouseEvents
+    />
     <IconButton
       aria-label="right"
       onClick={handleNextClick}
