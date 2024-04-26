@@ -4,7 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export function Hero() {
   return (
@@ -19,12 +19,12 @@ export function Hero() {
               height={70}
             />
           </Box>
-          <p className="max-w-[600px] md:text-2xl/relaxed">
+          <Typography className="max-w-[600px] md:text-2xl/relaxed">
             Our mission is to break down barriers, foster global connections
             among students, ignite a deep passion for learning, and promote a
             vibrant culture of knowledge sharing for both students and lifelong
             learners.
-          </p>
+          </Typography>
           <Box className="min-[600px] mt-8 flex flex-col sm:w-48 sm:flex-row">
             <Link
               className="!important inline-flex h-10 w-72 items-center justify-center rounded-3xl bg-joinus_btn px-12 text-lg font-bold text-white shadow hover:bg-joinus_btn focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"

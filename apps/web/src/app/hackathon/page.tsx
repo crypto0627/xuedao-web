@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Hero } from "@/app";
+import { Hero, Prize } from "@/app/hackathon";
 import { Footer, Navbar } from "@/components";
 
 export default function Hackathon() {
@@ -10,6 +10,7 @@ export default function Hackathon() {
     <>
       <Navbar />
       <Hero />
+      <Prize />
       <Footer />
     </>
   );
