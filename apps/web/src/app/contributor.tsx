@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
+
 import { Avatar, Grid, Typography, Box, Paper } from "@mui/material";
+import Image from "next/image";
 import { MemberType } from "@/models/types/uiTypes";
 
 export function Contributors() {
@@ -21,12 +23,12 @@ export function Contributors() {
   ];
 
   return (
-    <section className="w-full bg-cover bg-center bg-xuedao_pink py-12 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center text-3xl font-bold sm:text-6xl">
-            Core Contributors
-        </div>
-        <div className="mt-8">
+    <Box className="w-full bg-xuedao_pink bg-cover bg-center py-12 md:py-24 lg:py-32">
+      <Box className="container mx-auto px-4 md:px-6">
+        <Box className="flex flex-col items-center justify-center space-y-4 text-center text-3xl font-bold sm:text-6xl">
+          Core Contributors
+        </Box>
+        <Box className="mt-8">
           <Grid
             container
             spacing={4}
@@ -40,16 +42,22 @@ export function Contributors() {
                     elevation={4}
                     sx={{
                       p: 1,
-                      borderRadius: "50%",
-                      display: "inline-block",
+                      borderRadius: '50%',
+                      display: 'inline-block',
                       mb: 2,
+                      width: 144,
+                      height: 144,
+                      overflow: 'hidden',
                     }}
                   >
-                    <Avatar
-                      alt={members[id].name}
-                      src={`/core-contributors/${members[id].name}.png`}
-                      sx={{ width: 144, height: 144 }}
-                    />
+                    <Box style={{ borderRadius: '50%', overflow: 'hidden', width: '100%', height: '100%' }}>
+                      <Image
+                        src={`/core-contributors/${members[id].name}.png`}
+                        alt={members[id].name}
+                        width={144}
+                        height={144}
+                      />
+                    </Box>
                   </Paper>
                   <Typography
                     variant="h6"
@@ -62,8 +70,8 @@ export function Contributors() {
               </Grid>
             ))}
           </Grid>
-        </div>
-      </div>
-    </section>
+        </Box>
+      </Box>
+    </Box>
   );
 }

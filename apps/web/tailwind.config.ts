@@ -13,8 +13,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        xuedao_pink: '#FFFAF4',
-        joinus_btn: '#FA9382',
+        xuedao_pink: "#FFFAF4",
+        joinus_btn: "#FA9382",
       },
     },
   },

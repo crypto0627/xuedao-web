@@ -12,8 +12,8 @@ export type ImageType = {
 };
 
 export type NavbarItemType = {
-    name: string,
-    icon: React.ReactElement
-    href: string
-    target: string
-}
+  name: string;
+  icon: React.ReactElement;
+  href: string;
+  target: string;
+};

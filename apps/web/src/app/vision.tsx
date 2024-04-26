@@ -1,13 +1,15 @@
 "use client";
-import { Box, Typography } from "@mui/material";
-import { AccessTime, People, Settings } from "@mui/icons-material";
+
 import React from "react";
+
+import { AccessTime, People, Settings } from "@mui/icons-material";
+import { Box, Typography } from "@mui/material";
 
 export function Vision() {
   return (
     <Box
       id="vision"
-      className="w-full bg-cover bg-center py-12 md:py-24 lg:py-32 bg-xuedao_pink"
+      className="w-full bg-xuedao_pink bg-cover bg-center py-12 md:py-24 lg:py-32"
       component="section"
     >
       <Box className="container mx-auto px-4 md:px-6">

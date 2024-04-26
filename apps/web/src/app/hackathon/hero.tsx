@@ -35,16 +35,6 @@ export function Hero() {
             </Link>
           </Box>
         </Box>
-        <Box className="absolute right-[20px] top-0 hidden xl:right-[-150px] xl:block xl:mt-10">
-          
-          <Image
-            src="/puzzle.png"
-            width={700}
-            height={600}
-            alt="puzzle"
-            priority
-          />
-        </Box>
       </Box>
     </Box>
   );

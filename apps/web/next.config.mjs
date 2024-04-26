@@ -19,7 +19,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    unoptimized: true,
+    unoptimized: false,
     formats: ['image/avif', 'image/webp'],
   },
 };

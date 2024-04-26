@@ -194,6 +194,12 @@
             "sizes": "144x144",
             "type": "image/svg",
             "purpose": "any"
+        },
+        {
+            "src": "/puzzle.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
         }
     ],
     "theme_color": "#3367D6",

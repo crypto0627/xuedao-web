@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import React, { useEffect } from "react";
 
 import Image from "next/image";
@@ -25,6 +26,7 @@ import {
   ListItemText,
   Box,
 } from "@mui/material";
+
 import { NavbarItemType } from "@/models/types/uiTypes";
 
 const NAV_MENU: NavbarItemType[] = [
@@ -78,10 +80,15 @@ export function Navbar() {
   }, []);
 
   return (
-    <AppBar position="sticky" color="transparent" elevation={0} className="bg-xuedao_pink">
+    <AppBar
+      position="sticky"
+      color="transparent"
+      elevation={0}
+      className="bg-xuedao_pink"
+    >
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <Link href="/" >
+          <Link href="/">
             <Image
               src="/XD_logo.png"
               alt="Xue DAO logo"
