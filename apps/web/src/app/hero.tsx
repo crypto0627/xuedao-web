@@ -35,8 +35,7 @@ export function Hero() {
             </Link>
           </Box>
         </Box>
-        <Box className="absolute right-[20px] top-0 hidden xl:right-[-150px] xl:block xl:mt-10">
-          
+        <Box className="absolute right-[20px] top-0 hidden sm:right-[-80px] md:right-[-100px] lg:right-[-120px] xl:right-[-150px] 2xl:right-[-180px] 2xl:block xl:mt-10">
           <Image
             src="/puzzle.png"
             width={700}
