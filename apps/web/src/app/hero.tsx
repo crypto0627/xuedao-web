@@ -15,6 +15,7 @@ export function Hero() {
               alt="xuedao logo"
               width={700}
               height={70}
+              priority
             />
           </Box>
           <Typography className="max-w-[600px] md:text-2xl/relaxed">
