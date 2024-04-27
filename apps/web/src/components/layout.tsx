@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import React from "react";
+import React from "react"
 
-import { red } from "@mui/material/colors";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { red } from "@mui/material/colors"
+import { ThemeProvider, createTheme } from "@mui/material/styles"
 
 const theme = createTheme({
   palette: {
@@ -11,14 +11,14 @@ const theme = createTheme({
       main: red[500],
     },
   },
-});
+})
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider theme={theme}>
       <div>{children}</div>
     </ThemeProvider>
-  );
+  )
 }
 
-export default Layout;
+export default Layout

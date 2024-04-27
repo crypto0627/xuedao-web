@@ -1,9 +1,7 @@
-"use client";
+import React from "react"
 
-import React from "react";
-
-import { AccessTime, People, Settings } from "@mui/icons-material";
-import { Box, Typography } from "@mui/material";
+import { AccessTime, People, Settings } from "@mui/icons-material"
+import { Box, Typography } from "@mui/material"
 
 export function Vision() {
   return (
@@ -79,5 +77,5 @@ export function Vision() {
         </Box>
       </Box>
     </Box>
-  );
+  )
 }

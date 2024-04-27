@@ -1,5 +1,5 @@
-"use client";
+"use client"
 
-export * from "./hero";
-export * from "./contributor";
-export * from "./vision";
+export * from "./hero"
+export * from "./contributor"
+export * from "./vision"

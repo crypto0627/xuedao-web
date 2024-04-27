@@ -1,10 +1,8 @@
-"use client";
+import React from "react"
 
-import React from "react";
-
-import Image from "next/image";
-import Link from "next/link";
-import { Box, Typography } from "@mui/material";
+import Image from "next/image"
+import Link from "next/link"
+import { Box, Typography } from "@mui/material"
 
 export function Hero() {
   return (
@@ -46,5 +44,5 @@ export function Hero() {
         </Box>
       </Box>
     </Box>
-  );
+  )
 }

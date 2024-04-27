@@ -1,21 +1,17 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import SwipeableViews from "react-swipeable-views";
-import {
-  bindKeyboard,
-  autoPlay,
-  virtualize,
-} from "react-swipeable-views-utils";
+import React, { useLayoutEffect, useState } from "react"
+import SwipeableViews from "react-swipeable-views"
+import { virtualize } from "react-swipeable-views-utils"
 
-import Image from "next/image";
+import Image from "next/image"
 
-import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { Box, IconButton, Pagination, Typography } from "@mui/material";
+import { ChevronLeft, ChevronRight, RadioButtonChecked, RadioButtonUnchecked } from "@mui/icons-material"
+import { Box, IconButton, Typography } from "@mui/material"
 
-import { ImageType } from "@/models/types/uiTypes";
+import { ImageType } from "@/models/types/uiTypes"
 
-const SwipeableViewsVirtualize = virtualize(SwipeableViews);
+const SwipeableViewsVirtualize = virtualize(SwipeableViews)
 
 const images: ImageType[] = [
   {
@@ -33,22 +29,31 @@ const images: ImageType[] = [
     imgPath: "/c.png",
     label: "c",
   },
-];
+]
 
 export function ReactSwipeableViews() {
-  const [index, setIndex] = useState(0);
-
+  const [index, setIndex] = useState(0)
+  const [icons, setIcons] = useState([] as React.ReactNode[])
+  useLayoutEffect(() => {
+    if (typeof window !== "undefined") {
+      const newIcons = images.map((image, idx) => (
+        idx === index ? <RadioButtonChecked key={idx} /> : <RadioButtonUnchecked key={idx} />
+      ))
+      setIcons(newIcons)
+    }
+  }, [index, images])
+  
   const handleChangeIndex = (index: number) => {
-    setIndex(index);
-  };
+    setIndex(index)
+  }
 
   const handleBackClick = () => {
-    setIndex(index - 1);
-  };
+    setIndex(index - 1)
+  }
 
   const handleNextClick = () => {
-    setIndex(index + 1);
-  };
+    setIndex(index + 1)
+  }
 
   return (
     <Box className="relative mx-auto flex h-screen flex-col items-center justify-center gap-6 overflow-hidden bg-xuedao_pink">
@@ -69,32 +74,27 @@ export function ReactSwipeableViews() {
           onChangeIndex={handleChangeIndex}
           slideCount={images.length}
           slideRenderer={({ index: imageIndex, key }) => {
-            const image = images.find((img) => img.index === imageIndex + 1);
+            const image = images.find((images) => images.index === imageIndex + 1)
             return (
-              <Box
-                key={key}
-                className="flex items-center justify-center align-middle"
-              >
-                {image && (
-                  <Box className="overflow-hidden rounded-3xl border-4 border-white hover:border-cyan-400">
-                    <Image
-                      src={image.imgPath}
-                      alt={image.label}
-                      width={800}
-                      height={600}
-                      priority
-                    />
-                    <Box display="flex" justifyContent="center">
-                      <Pagination
-                        count={images.length}
-                        defaultPage={1}
-                        size="small"
-                      />
-                    </Box>
-                  </Box>
-                )}
-              </Box>
-            );
+<Box key={key} className="flex flex-col items-center justify-center align-middle">
+  {image && (
+    <Box className="overflow-hidden rounded-3xl mb-2">
+      <Image
+        src={image.imgPath}
+        alt={image.label}
+        width={800}
+        height={600}
+        priority
+      />
+    </Box>
+  )}
+  <Box className="flex">
+    {icons.map((icon, idx) => (
+      <IconButton key={idx} onClick={() => setIndex(idx)}>{icon}</IconButton>
+    ))}
+  </Box>
+</Box>
+            )
           }}
           axis="x"
           enableMouseEvents
@@ -109,5 +109,5 @@ export function ReactSwipeableViews() {
         </IconButton>
       </Box>
     </Box>
-  );
+  )
 }

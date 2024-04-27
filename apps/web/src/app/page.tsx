@@ -1,10 +1,8 @@
-"use client";
+import { Navbar, ReactSwipeableViews, Footer } from "@/components"
 
-import { Navbar, ReactSwipeableViews, Footer } from "@/components";
-
-import { Contributors } from "./contributor";
-import { Hero } from "./hero";
-import { Vision } from "./vision";
+import { Contributors } from "./contributor"
+import { Hero } from "./hero"
+import { Vision } from "./vision"
 
 export default function Profile() {
   return (
@@ -16,5 +14,5 @@ export default function Profile() {
       <ReactSwipeableViews />
       <Footer />
     </>
-  );
+  )
 }

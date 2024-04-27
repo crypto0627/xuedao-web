@@ -1,10 +1,8 @@
-"use client";
+import React from "react"
 
-import React from "react";
-
-import { Avatar, Grid, Typography, Box, Paper } from "@mui/material";
-import Image from "next/image";
-import { MemberType } from "@/models/types/uiTypes";
+import { Avatar, Grid, Typography, Box, Paper } from "@mui/material"
+import Image from "next/image"
+import { MemberType } from "@/models/types/uiTypes"
 
 export function Contributors() {
   const members: MemberType[] = [
@@ -20,7 +18,7 @@ export function Contributors() {
     { id: 10, name: "HongRu" },
     { id: 11, name: "Jourden" },
     { id: 12, name: "Rita" },
-  ];
+  ]
 
   return (
     <Box className="w-full bg-xuedao_pink bg-cover bg-center py-12 md:py-24 lg:py-32">
@@ -73,5 +71,5 @@ export function Contributors() {
         </Box>
       </Box>
     </Box>
-  );
+  )
 }

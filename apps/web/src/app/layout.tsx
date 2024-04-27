@@ -1,17 +1,17 @@
-import React from "react";
+import React from "react"
 
-import type { Metadata, Viewport } from "next";
-import { Roboto } from "next/font/google";
+import type { Metadata, Viewport } from "next"
+import { Roboto } from "next/font/google"
 
-import { Layout } from "@/components";
+import { Layout } from "@/components"
 
-import "./globals.css";
+import "./globals.css"
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700", "900"],
   display: "swap",
-});
+})
 
 export const metadata: Metadata = {
   manifest: "/manifest.json",
@@ -20,16 +20,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo-square.png",
   },
-};
+}
 
 export const viewport: Viewport = {
   themeColor: "#3367D6",
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -40,5 +40,5 @@ export default function RootLayout({
         <Layout>{children}</Layout>
       </body>
     </html>
-  );
+  )
 }
