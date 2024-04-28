@@ -42,7 +42,7 @@ export function ReactSwipeableViews() {
       setIcons(newIcons)
     }
   }, [index, images])
-  
+
   const handleChangeIndex = (index: number) => {
     setIndex(index)
   }
@@ -56,7 +56,7 @@ export function ReactSwipeableViews() {
   }
 
   return (
-    <Box className="relative mx-auto flex h-screen flex-col items-center justify-center gap-6 overflow-hidden bg-xuedao_pink">
+    <Box className="mx-auto flex flex-col items-center py-5 justify-center gap-6 overflow-hidden bg-xuedao_pink">
       <Typography variant="h3" className="text-3xl font-bold sm:text-6xl">
         Highlights
       </Typography>
@@ -76,24 +76,24 @@ export function ReactSwipeableViews() {
           slideRenderer={({ index: imageIndex, key }) => {
             const image = images.find((images) => images.index === imageIndex + 1)
             return (
-<Box key={key} className="flex flex-col items-center justify-center align-middle">
-  {image && (
-    <Box className="overflow-hidden rounded-3xl mb-2">
-      <Image
-        src={image.imgPath}
-        alt={image.label}
-        width={800}
-        height={600}
-        priority
-      />
-    </Box>
-  )}
-  <Box className="flex">
-    {icons.map((icon, idx) => (
-      <IconButton key={idx} onClick={() => setIndex(idx)}>{icon}</IconButton>
-    ))}
-  </Box>
-</Box>
+              <Box key={key} className="flex flex-col items-center justify-center align-middle">
+                {image && (
+                  <Box className="overflow-hidden rounded-3xl mb-2">
+                    <Image
+                      src={image.imgPath}
+                      alt={image.label}
+                      width={800}
+                      height={600}
+                      priority
+                    />
+                  </Box>
+                )}
+                <Box className="flex">
+                  {icons.map((icon, idx) => (
+                    <IconButton key={idx} onClick={() => setIndex(idx)}>{icon}</IconButton>
+                  ))}
+                </Box>
+              </Box>
             )
           }}
           axis="x"

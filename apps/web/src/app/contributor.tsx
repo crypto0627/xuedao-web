@@ -21,7 +21,7 @@ export function Contributors() {
   ]
 
   return (
-    <Box className="w-full bg-xuedao_pink bg-cover bg-center py-12 md:py-24 lg:py-32">
+    <Box className="flex w-full bg-xuedao_pink bg-cover bg-center md:py-8 lg:py-12">
       <Box className="container mx-auto px-4 md:px-6">
         <Box className="flex flex-col items-center justify-center space-y-4 text-center text-3xl font-bold sm:text-6xl">
           Core Contributors

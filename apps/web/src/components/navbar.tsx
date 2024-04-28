@@ -31,7 +31,7 @@ import { NavbarItemType } from "@/models/types/uiTypes"
 
 const NAV_MENU: NavbarItemType[] = [
   {
-    name: "Learn",
+    name: "Home",
     icon: <WebIcon />,
     href: "/",
     target: "",
@@ -42,14 +42,14 @@ const NAV_MENU: NavbarItemType[] = [
     href: "https://lu.ma/calendar/cal-Pj8ibnEe0RyZsPH",
     target: "_blank",
   },
+  // {
+  //   name: "Hackathon",
+  //   icon: <CodeIcon />,
+  //   href: "/hackathon",
+  //   target: "",
+  // },
   {
-    name: "Hackathon",
-    icon: <CodeIcon />,
-    href: "/hackathon",
-    target: "",
-  },
-  {
-    name: "Community",
+    name: "Medium",
     icon: <BookIcon />,
     href: "https://medium.com/xuedao",
     target: "_blank",

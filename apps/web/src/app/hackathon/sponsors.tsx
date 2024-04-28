@@ -1,9 +1,28 @@
 import React from "react"
 
 import { AccessTime, People, Settings } from "@mui/icons-material"
-import { Box, Typography } from "@mui/material"
+import { Box, Grid, ImageList, ImageListItem, ImageListItemBar, Typography } from "@mui/material"
+import Image from "next/image"
+import { ImageType } from "@/models/types/uiTypes"
 
 export function Sponsors() {
+  const images: ImageType[] = [
+    {
+      index: 1,
+      imgPath: "/sponsors/zeus_network.webp",
+      label: "a",
+    },
+    {
+      index: 2,
+      imgPath: "/",
+      label: "b",
+    },
+    {
+      index: 3,
+      imgPath: "/c.webp",
+      label: "c",
+    },
+  ]
   return (
     <Box
       id="sponsors"
@@ -15,6 +34,28 @@ export function Sponsors() {
           <Typography variant="h3" className="text-3xl font-bold sm:text-6xl">
             Sponsors
           </Typography>
+          <Box className="flex flex-row items-center justify-center ">
+            <Grid container spacing={3}>
+              <Grid item xs={2}>
+                <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+              </Grid>
+              <Grid item xs={2}>
+              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+              </Grid>
+              <Grid item xs={2}>
+              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+              </Grid>
+              <Grid item xs={2}>
+              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+              </Grid>
+              <Grid item xs={2}>
+              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+              </Grid>
+              <Grid item xs={2}>
+              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+              </Grid>
+            </Grid>
+          </Box>
         </Box>
       </Box>
     </Box>
