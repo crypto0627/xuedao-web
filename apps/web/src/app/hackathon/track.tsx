@@ -1,5 +1,5 @@
-import React from "react"
-import { Box, Typography } from "@mui/material"
+import React from "react";
+import { Box, Typography } from "@mui/material";
 
 export function Track() {
   return (
@@ -16,5 +16,5 @@ export function Track() {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }

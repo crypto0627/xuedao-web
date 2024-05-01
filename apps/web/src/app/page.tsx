@@ -1,8 +1,11 @@
-import { Navbar, ReactSwipeableViews, Footer } from "@/components"
-
-import { Contributors } from "./contributor"
-import { Hero } from "./hero"
-import { Vision } from "./vision"
+import { Navbar, Footer } from "@/components";
+import {
+  Hero,
+  Contributors,
+  Vision,
+  HackathonInfo,
+  Events,
+} from "@/app/components";
 
 export default function Profile() {
   return (
@@ -10,9 +13,10 @@ export default function Profile() {
       <Navbar />
       <Hero />
       <Vision />
+      <HackathonInfo />
+      <Events />
       <Contributors />
-      <ReactSwipeableViews />
       <Footer />
     </>
-  )
+  );
 }

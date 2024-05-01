@@ -1,17 +1,17 @@
-import React from "react"
+import React from "react";
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
-import * as DiscordIcon from "../../public/icons-discord.svg"
+import * as DiscordIcon from "../../public/icons-discord.svg";
 import {
   Instagram as InstagramIcon,
   Telegram as TelegramIcon,
   X as XIcon,
   Facebook as FacebookIcon,
   LinkedIn as LinkedInIcon,
-} from "@mui/icons-material"
-import { IconButton, Typography, Box } from "@mui/material"
+} from "@mui/icons-material";
+import { IconButton, Typography, Box } from "@mui/material";
 
 export function Footer() {
   return (
@@ -82,7 +82,7 @@ export function Footer() {
         </Typography>
       </Box>
     </Box>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import { Footer, Navbar } from "@/components"
+import { Footer, Navbar } from "@/components";
 
 export default function Learn() {
   return (
@@ -9,5 +9,5 @@ export default function Learn() {
 
       <Footer />
     </>
-  )
+  );
 }

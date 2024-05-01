@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import { Hero } from "@/app"
-import { Footer, Navbar } from "@/components"
+import { Hero } from "@/app/components";
+import { Footer, Navbar } from "@/components";
 
 export default function Policy() {
   return (
@@ -10,5 +10,5 @@ export default function Policy() {
       <Hero />
       <Footer />
     </>
-  )
+  );
 }

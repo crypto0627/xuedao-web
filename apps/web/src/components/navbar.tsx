@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 import {
   Web as WebIcon,
@@ -12,7 +12,7 @@ import {
   Close as CloseIcon,
   Menu as MenuIcon,
   Book as BookIcon,
-} from "@mui/icons-material"
+} from "@mui/icons-material";
 import {
   AppBar,
   Button,
@@ -25,9 +25,9 @@ import {
   ListItemIcon,
   ListItemText,
   Box,
-} from "@mui/material"
+} from "@mui/material";
 
-import { NavbarItemType } from "@/models/types/uiTypes"
+import { NavbarItemType } from "@/models/types/uiTypes";
 
 const NAV_MENU: NavbarItemType[] = [
   {
@@ -54,37 +54,37 @@ const NAV_MENU: NavbarItemType[] = [
     href: "https://medium.com/xuedao",
     target: "_blank",
   },
-]
+];
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => setOpen((cur) => !cur)
+  const handleOpen = () => setOpen((cur) => !cur);
 
   useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpen(false),
-    )
-  }, [])
+    );
+  }, []);
 
   useEffect(() => {
     if (window.location.hash) {
       const element = document.getElementById(
         window.location.hash.substring(1),
-      )
+      );
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [])
+  }, []);
 
   return (
     <AppBar
       position="sticky"
       color="transparent"
       elevation={0}
-      className="bg-xuedao_pink"
+      className="bg-white"
     >
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -172,7 +172,7 @@ export function Navbar() {
         </List>
       </Collapse>
     </AppBar>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

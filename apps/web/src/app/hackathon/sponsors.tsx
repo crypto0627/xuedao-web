@@ -1,9 +1,16 @@
-import React from "react"
+import React from "react";
 
-import { AccessTime, People, Settings } from "@mui/icons-material"
-import { Box, Grid, ImageList, ImageListItem, ImageListItemBar, Typography } from "@mui/material"
-import Image from "next/image"
-import { ImageType } from "@/models/types/uiTypes"
+import { AccessTime, People, Settings } from "@mui/icons-material";
+import {
+  Box,
+  Grid,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  Typography,
+} from "@mui/material";
+import Image from "next/image";
+import { ImageType } from "@/models/types/uiTypes";
 
 export function Sponsors() {
   const images: ImageType[] = [
@@ -22,7 +29,7 @@ export function Sponsors() {
       imgPath: "/c.webp",
       label: "c",
     },
-  ]
+  ];
   return (
     <Box
       id="sponsors"
@@ -37,27 +44,57 @@ export function Sponsors() {
           <Box className="flex flex-row items-center justify-center ">
             <Grid container spacing={3}>
               <Grid item xs={2}>
-                <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+                <Image
+                  src={"/sponsors/zeus_network.webp"}
+                  width={150}
+                  height={150}
+                  alt="zeus_network.webp"
+                />
               </Grid>
               <Grid item xs={2}>
-              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+                <Image
+                  src={"/sponsors/zeus_network.webp"}
+                  width={150}
+                  height={150}
+                  alt="zeus_network.webp"
+                />
               </Grid>
               <Grid item xs={2}>
-              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+                <Image
+                  src={"/sponsors/zeus_network.webp"}
+                  width={150}
+                  height={150}
+                  alt="zeus_network.webp"
+                />
               </Grid>
               <Grid item xs={2}>
-              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+                <Image
+                  src={"/sponsors/zeus_network.webp"}
+                  width={150}
+                  height={150}
+                  alt="zeus_network.webp"
+                />
               </Grid>
               <Grid item xs={2}>
-              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+                <Image
+                  src={"/sponsors/zeus_network.webp"}
+                  width={150}
+                  height={150}
+                  alt="zeus_network.webp"
+                />
               </Grid>
               <Grid item xs={2}>
-              <Image src={'/sponsors/zeus_network.webp'} width={150} height={150} alt="zeus_network.webp"/>
+                <Image
+                  src={"/sponsors/zeus_network.webp"}
+                  width={150}
+                  height={150}
+                  alt="zeus_network.webp"
+                />
               </Grid>
             </Grid>
           </Box>
         </Box>
       </Box>
     </Box>
-  )
+  );
 }
