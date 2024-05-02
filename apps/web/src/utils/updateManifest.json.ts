@@ -42,14 +42,14 @@ function updateManifest(): void {
 
     // Filter image files
     const imageFiles = files.filter((file) =>
-      /\.(png|jpg|jpeg|gif|svg)$/.test(file),
+      /\.(png|jpg|jpeg|gif|svg|webp)$/.test(file),
     );
 
     // Add new icons to manifest
     imageFiles.forEach((file) => {
       const iconPath = `/${file}`;
       const sizes = "512x512";
-      const type = "image/png";
+      const type = "image/webp";
       const purpose = "any";
 
       // Check if icon already exists in manifest
@@ -67,7 +67,7 @@ function updateManifest(): void {
     imageFiles.forEach((file) => {
       const iconPath = `/${file}`;
       const sizes = "512x512";
-      const type = "image/png";
+      const type = "image/webp";
       const purpose = "any";
 
       // Check if icon already exists in manifest

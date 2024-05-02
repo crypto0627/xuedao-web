@@ -1,10 +1,11 @@
 import { Navbar, Footer } from "@/components";
 import {
   Hero,
-  Contributors,
   Vision,
   HackathonInfo,
   Events,
+  Partner,
+  Contributor_Team,
 } from "@/app/components";
 
 export default function Profile() {
@@ -15,7 +16,8 @@ export default function Profile() {
       <Vision />
       <HackathonInfo />
       <Events />
-      <Contributors />
+      <Partner />
+      <Contributor_Team />
       <Footer />
     </>
   );

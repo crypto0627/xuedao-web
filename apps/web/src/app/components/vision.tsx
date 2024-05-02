@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import Image from "next/image";
-import { MemberType } from "@/models/types/uiTypes";
+import { UniversityType } from "@/models/types/uiTypes";
 
-const university: MemberType[] = [
+const university: UniversityType[] = [
   { id: 1, name: "un1" },
   { id: 2, name: "un2" },
   { id: 3, name: "un3" },

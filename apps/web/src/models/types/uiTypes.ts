@@ -3,6 +3,13 @@ import React from "react";
 export type MemberType = {
   id: number;
   name: string;
+  subtitle: string;
+  type: string;
+};
+
+export type UniversityType = {
+  id: number;
+  name: string;
 };
 
 export type ImageType = {
