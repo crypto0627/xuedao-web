@@ -24,7 +24,7 @@ export function HackathonInfo() {
           <Grid item xs={12} sm={6}>
             <Box className="border-4 border-black rounded-3xl bg-white py-5 px-5 h-full justify-center items-center flex flex-col gap-10">
               <Image
-                className="items-center ml-24"
+                className="items-center xl:ml-24"
                 src={"/hackathon_text.png"}
                 width={500}
                 height={600}
