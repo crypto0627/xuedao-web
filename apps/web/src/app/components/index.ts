@@ -6,3 +6,4 @@ export * from "./hackathonInfo";
 export * from "./events";
 export * from "./partnership";
 export * from "./contributorTeam";
+export * from "./lastNews";

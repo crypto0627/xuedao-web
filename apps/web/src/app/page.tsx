@@ -6,6 +6,7 @@ import {
   Events,
   Partner,
   Contributor_Team,
+  LastNews,
 } from "@/app/components";
 
 export default function Profile() {
@@ -18,6 +19,7 @@ export default function Profile() {
       <Events />
       <Partner />
       <Contributor_Team />
+      <LastNews />
       <Footer />
     </>
   );

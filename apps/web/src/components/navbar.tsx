@@ -42,12 +42,6 @@ const NAV_MENU: NavbarItemType[] = [
     href: "https://lu.ma/calendar/cal-Pj8ibnEe0RyZsPH",
     target: "_blank",
   },
-  // {
-  //   name: "Hackathon",
-  //   icon: <CodeIcon />,
-  //   href: "/hackathon",
-  //   target: "",
-  // },
   {
     name: "Medium",
     icon: <BookIcon />,
