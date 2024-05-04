@@ -7,7 +7,7 @@ import Link from "next/link";
 export function Events() {
   return (
     <Box
-      className="w-full bg-gradient-to-b from-event to-event2 py-12 sm:py-20 md:py-24 lg:py-28 xl:py-32 px-2"
+      className="w-full bg-gradient-to-b from-event to-event2 py-12 sm:py-20 md:py-24 lg:py-28 xl:py-32 px-10"
       component="section"
     >
       <Image
@@ -24,64 +24,63 @@ export function Events() {
         </Grid>
         {/* Column 2: 50% width */}
         <Grid item xs={12} md={6} className="gap-y-10">
-          {/* Row 1: 25% height */}
+          {/* Row 1: 30% height */}
           <Grid
             container
             item
             xs={12}
-            md={6}
-            style={{ height: "25%" }}
-            className="flex xl:flex-col"
+            style={{ height: "30%" }}
+            className="flex xl:flex-col pt-5"
           >
             <Typography variant="h5" className="font-bold" align="left">
               We Hack!
             </Typography>
-            <Typography className="max-w-[550px] text-black" align="left">
+            <Typography className="max-w-[550px] text-black ml-5" align="left">
               We join hackathons together and win several prizes already
             </Typography>
           </Grid>
-          {/* Row 2: 25% height */}
+          {/* Row 2: 30% height */}
           <Grid
             container
             item
             xs={12}
-            style={{ height: "25%" }}
+            style={{ height: "30%" }}
             className="flex xl:flex-col"
           >
             <Typography variant="h5" className="font-bold" align="left">
               We Learn!
             </Typography>
-            <Typography className="max-w-[550px] text-black" align="left">
+            <Typography className="max-w-[550px] text-black ml-5" align="left">
               We host bi-weekly co-learning day which is open for everyone to
               join, also the study groups
             </Typography>
           </Grid>
-          {/* Row 3: 25% height */}
+          {/* Row 3: 30% height */}
           <Grid
             container
             item
             xs={12}
-            style={{ height: "25%" }}
-            className="flex xl:flex-col pt-5"
+            style={{ height: "30%" }}
+            className="flex xl:flex-col"
           >
             <Typography variant="h5" className="font-bold" align="left">
               We Connect!
             </Typography>
-            <Typography className="max-w-[550px] text-black" align="left">
+            <Typography className="max-w-[550px] text-black ml-5" align="left">
               We host side event during ETH Taipei, and Keynotes Speechs with
               professions from the industry
             </Typography>
           </Grid>
-          {/* Row 4: 25% height */}
+          {/* Row 4: 10% height */}
           <Grid
             container
             item
             xs={12}
-            style={{ height: "25%" }}
-            className="pt-10"
+            style={{ height: "10%" }}
+            className="pt-5"
           >
             <Link href={"https://linktr.ee/xuedaoconnect/"}>
-              <Button className="border-4 bg-xuedao_orange hover:shadow-[-18px_25px_14px_-10px_rgba(204,204,204,0.82)] rounded-xl p-1 text-xs md:text-sm lg:text-base xl:text-lg text-black font-bold h-10 xl:h-12">
+              <Button className="border-4 bg-xuedao_orange hover:shadow-[-18px_25px_14px_-10px_rgba(204,204,204,0.82)] hover:bg-xuedao_orange rounded-xl text-xs md:text-sm lg:text-base xl:text-lg text-black font-bold h-10 xl:h-12">
                 For More Events Information
               </Button>
             </Link>

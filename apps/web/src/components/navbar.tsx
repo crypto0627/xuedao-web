@@ -31,12 +31,6 @@ import { NavbarItemType } from "@/models/types/uiTypes";
 
 const NAV_MENU: NavbarItemType[] = [
   {
-    name: "Home",
-    icon: <WebIcon />,
-    href: "/",
-    target: "",
-  },
-  {
     name: "Events",
     icon: <AccountCircleIcon />,
     href: "https://lu.ma/calendar/cal-Pj8ibnEe0RyZsPH",
@@ -75,97 +69,104 @@ export function Navbar() {
 
   return (
     <AppBar
-      position="sticky"
-      color="transparent"
-      elevation={0}
-      className="bg-white"
+  position="sticky"
+  color="transparent"
+  elevation={0}
+  className="bg-white"
+>
+  <Toolbar className="flex justify-between items-center">
+    {/* Logo */}
+    <Typography variant="h6" component="div" sx={{ flexGrow: 1, my: 2 }}>
+      <Link href="/">
+        <Image
+          src="/XD_logo.png"
+          alt="Xue DAO logo"
+          width={70}
+          height={100}
+          style={{ width: "100px", height: "auto" }}
+          priority
+        />
+      </Link>
+    </Typography>
+
+    {/* Collapse */}
+    <Box
+      sx={{
+        display: { xs: "none", lg: "flex" },
+        gap: 2,
+        alignItems: "center",
+        justifyItems: "center",
+        flexGrow: 1,
+      }}
     >
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <Link href="/">
-            <Image
-              src="/XD_logo.png"
-              alt="Xue DAO logo"
-              width={100}
-              height={100}
-              style={{ width: "100px", height: "auto" }}
-              priority
-            />
-          </Link>
-        </Typography>
-        <Box
-          sx={{
-            display: { xs: "none", lg: "flex" },
-            gap: 2,
-            alignItems: "center",
-            pt: 2,
-          }}
-        >
-          {NAV_MENU.map(({ name, icon: Icon, href, target }) => (
-            <Link key={name} href={href} target={target} passHref>
-              <Button color="inherit" startIcon={Icon} className="rounded-full">
-                {name}
-              </Button>
-            </Link>
-          ))}
-        </Box>
-        <div style={{ flexGrow: 1 }} />
-        <Box sx={{ display: { xs: "none", lg: "flex" } }}>
-          <Link
-            href="https://forms.gle/WAm4n1KiKeYksWj19"
-            target="_blank"
-            passHref
-          >
-            <Button
-              color="inherit"
-              variant="outlined"
-              endIcon={<AccountCircleIcon />}
-              className="rounded-full"
-            >
-              Join Us
-            </Button>
-          </Link>
-        </Box>
-        <IconButton
-          edge="start"
+      {NAV_MENU.map(({ name, icon: Icon, href, target }) => (
+        <Link key={name} href={href} target={target} passHref>
+          <Button color="inherit" startIcon={Icon} className="rounded-full">
+            {name}
+          </Button>
+        </Link>
+      ))}
+    </Box>
+
+    {/* Button */}
+    <Box sx={{ display: { xs: "none", lg: "flex" } }}>
+      <Link href="https://forms.gle/WAm4n1KiKeYksWj19" target="_blank" passHref>
+        <Button
           color="inherit"
-          aria-label="menu"
-          onClick={handleOpen}
-          sx={{ display: { xs: "block", lg: "none" } }}
+          variant="outlined"
+          endIcon={<AccountCircleIcon />}
+          className="rounded-full"
         >
-          {open ? <CloseIcon /> : <MenuIcon />}
-        </IconButton>
-      </Toolbar>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="nav">
-          {NAV_MENU.map(({ name, icon: Icon, href, target }) => (
-            <Link key={name} href={href} target={target} passHref>
-              <Box sx={{ display: "block", textAlign: "left", pt: 1 }}>
-                <ListItem onClick={handleOpen}>
-                  <ListItemIcon>{Icon}</ListItemIcon>
-                  <ListItemText primary={name} />
-                </ListItem>
-              </Box>
-            </Link>
-          ))}
-          <ListItem>
-            <Link
-              href="https://forms.gle/WAm4n1KiKeYksWj19"
-              target="_blank"
-              passHref
-            >
-              <Button
-                color="inherit"
-                variant="outlined"
-                endIcon={<AccountCircleIcon />}
-              >
-                Join Us
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
-      </Collapse>
-    </AppBar>
+          Join Us
+        </Button>
+      </Link>
+    </Box>
+
+    {/* Mobile Menu Icon */}
+    <IconButton
+      edge="start"
+      color="inherit"
+      aria-label="menu"
+      onClick={handleOpen}
+      sx={{ display: { xs: "block", lg: "none" } }}
+    >
+      {open ? <CloseIcon /> : <MenuIcon />}
+    </IconButton>
+  </Toolbar>
+
+  {/* Collapse */}
+  <Collapse in={open} timeout="auto" unmountOnExit>
+    <List component="nav">
+      {NAV_MENU.map(({ name, icon: Icon, href, target }) => (
+        <Link key={name} href={href} target={target} passHref>
+          <Box sx={{ display: "block", textAlign: "left", pt: 1 }}>
+            <ListItem onClick={handleOpen}>
+              <ListItemIcon>{Icon}</ListItemIcon>
+              <ListItemText primary={name} />
+            </ListItem>
+          </Box>
+        </Link>
+      ))}
+      <ListItem>
+        <Link
+          href="https://forms.gle/WAm4n1KiKeYksWj19"
+          target="_blank"
+          passHref
+        >
+          <Button
+            color="inherit"
+            variant="outlined"
+            endIcon={<AccountCircleIcon />}
+            className="rounded-full"
+          >
+            Join Us
+          </Button>
+        </Link>
+      </ListItem>
+    </List>
+  </Collapse>
+</AppBar>
+
   );
 }
 

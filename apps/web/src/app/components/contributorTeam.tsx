@@ -48,7 +48,7 @@ export function Contributor_Team() {
 
   const Member: React.FC<MemberProps> = ({ name, subtitle }) => (
     <Box className="flex flex-col items-center text-center">
-      <div
+      <Box
         style={{
           width: 60,
           height: 60,
@@ -56,15 +56,14 @@ export function Contributor_Team() {
           borderRadius: "50%",
         }}
       >
-        <Image
+        <Avatar
         src={`/core-contributors/${name}.webp`}
-        width={60}
-        height={60}
+        sx={{width: 50, height: 50}}
         className="w-full h-full object-cover"
         alt={name}
       />
 
-      </div>
+      </Box>
       <Typography className="font-bold text-sm mt-2">{name}</Typography>
       <Typography className="font-bold text-xs">{subtitle}</Typography>
     </Box>

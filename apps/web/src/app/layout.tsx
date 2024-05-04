@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Xue DAO",
   description: "Xue DAO, a student-run DAO for students.",
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon-32x32.png",
   },
 };
 
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" sizes="32x32" href="/XD_logo.ico" type="image/ico" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={roboto.className}>
         <Layout>{children}</Layout>
