@@ -13,14 +13,14 @@ export function Contributor_Team() {
     { id: 3, name: "Louis", subtitle: "NTU | CSIE", type: "Builders" },
     { id: 4, name: "Johnny", subtitle: "NTU | IB", type: "Builders" },
     { id: 5, name: "Terrance", subtitle: "NTU | CSIE", type: "Builders" },
-    { id: 6, name: "Jake", subtitle: "NTU | CCE", type: "Builders" },
-    { id: 7, name: "Jack", subtitle: "NCCU | BA", type: "Builders" },
     { id: 8, name: "Moven", subtitle: "NTU | Econ", type: "Builders" },
     { id: 9, name: "Paul", subtitle: "NTU | CSIE", type: "Builders" },
     { id: 10, name: "HongRu", subtitle: "NTU | EE", type: "Builders" },
     { id: 11, name: "Eric", subtitle: "NTU | EE", type: "Builders" },
     { id: 12, name: "Tim", subtitle: "NTU | IB", type: "Builders" },
     { id: 13, name: "Jourden", subtitle: "NTU | EE", type: "Builders" },
+    { id: 6, name: "Jake", subtitle: "NKUST | CCE", type: "Builders" },
+    { id: 7, name: "Jack", subtitle: "NCCU | BA", type: "Builders" },
     { id: 14, name: "Andrew", subtitle: "NCU | FIN", type: "Operation" },
     { id: 15, name: "CG", subtitle: "NTNU | History", type: "Operation" },
     { id: 16, name: "Rita", subtitle: "NCCU | Law", type: "Operation" },
@@ -38,6 +38,37 @@ export function Contributor_Team() {
     { id: 28, name: "Ken", subtitle: "NTUT | IFM", type: "Community" },
     { id: 29, name: "Jordan", subtitle: "NTU | SM", type: "Community" },
   ];
+  const builder = members.slice(0, 14);
+  const operation = members.slice(14, 18);
+  const community = members.slice(18, 30);
+  interface MemberProps {
+    name: string;
+    subtitle: string;
+  }
+
+  const Member: React.FC<MemberProps> = ({ name, subtitle }) => (
+    <Box className="flex flex-col items-center text-center">
+      <div
+        style={{
+          width: 60,
+          height: 60,
+          overflow: "hidden",
+          borderRadius: "50%",
+        }}
+      >
+        <Image
+        src={`/core-contributors/${name}.webp`}
+        width={60}
+        height={60}
+        className="w-full h-full object-cover"
+        alt={name}
+      />
+
+      </div>
+      <Typography className="font-bold text-sm mt-2">{name}</Typography>
+      <Typography className="font-bold text-xs">{subtitle}</Typography>
+    </Box>
+  );
 
   return (
     <Box className="flex w-full bg-gradient-to-b from-contributor to-contributor2 md:py-8 lg:py-12">
@@ -51,291 +82,41 @@ export function Contributor_Team() {
           </Typography>
         </Box>
         <Box className="flex flex-col xl:flex-row justify-center items-center p-5 gap-5">
-          <Box className="flex flex-col justify-center items-center text-center border-4 border-black p-5 xl:w-1/3 w-full h-full bg-white rounded-3xl">
+          <Box className="flex flex-col justify-center items-center text-center border-4 border-black p-2 xl:w-1/3 w-full h-full bg-white rounded-3xl">
             <Typography variant="h6">Builder (B)</Typography>
-            <Box className="flex justify-between w-full p-5">
-              {members.slice(0, 4).map((member) => (
-                <Box
+            <Box className="flex flex-wrap justify-center w-full p-5 gap-5">
+              {builder.map((member) => (
+                <Member
                   key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-            <Box className="flex justify-between w-full p-5">
-              {members.slice(4, 8).map((member) => (
-                <Box
-                  key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-            <Box className="flex justify-between w-full p-5">
-              {members.slice(8, 12).map((member) => (
-                <Box
-                  key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-            <Box className="flex justify-center gap-12 w-full p-5">
-              {members.slice(12, 14).map((member) => (
-                <Box
-                  key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
+                  name={member.name}
+                  subtitle={member.subtitle}
+                />
               ))}
             </Box>
           </Box>
           <Box className="flex flex-col items-center border-4 border-black p-5 xl:w-1/5 w-full h-full bg-white rounded-3xl gap-8">
             <Typography variant="h6">Operation (O)</Typography>
-            {members.slice(14, 18).map((member) => (
-              <Box
-                key={member.id}
-                className="flex flex-col items-center text-center"
-              >
-                <div
-                  style={{
-                    width: 50,
-                    height: 50,
-                    overflow: "hidden",
-                    borderRadius: "50%",
-                  }}
-                >
-                  <Image
-                    src={`/core-contributors/${member.name}.webp`}
-                    width={50}
-                    height={50}
-                    className="w-full h-full object-cover"
-                    alt={member.name}
-                  />
-                </div>
-                <Typography className="font-bold text-sm mt-2">
-                  {member.name}
-                </Typography>
-                <Typography className="font-bold text-xs">
-                  {member.subtitle}
-                </Typography>
+            <Box className="flex flex-wrap justify-center w-full p-5 gap-5">
+            {operation.map((member) => (
+                <Member
+                  key={member.id}
+                  name={member.name}
+                  subtitle={member.subtitle}
+                />
+              ))}
               </Box>
-            ))}
           </Box>
           <Box className="flex flex-col justify-center items-center text-center border-4 border-black p-5 xl:w-1/3 w-full h-full bg-white rounded-3xl">
             <Typography variant="h6">Community (C)</Typography>
-            <Box className="flex justify-between w-full p-5">
-              {members.slice(18, 21).map((member) => (
-                <Box
+            <Box className="flex flex-wrap justify-center w-full p-5 gap-5">
+            {community.map((member) => (
+                <Member
                   key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
+                  name={member.name}
+                  subtitle={member.subtitle}
+                />
               ))}
-            </Box>
-            <Box className="flex justify-between w-full p-5">
-              {members.slice(21, 24).map((member) => (
-                <Box
-                  key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-            <Box className="flex justify-between w-full p-5">
-              {members.slice(24, 27).map((member) => (
-                <Box
-                  key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-            <Box className="flex justify-between w-full p-5">
-              {members.slice(27, 30).map((member) => (
-                <Box
-                  key={member.id}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div
-                    style={{
-                      width: 50,
-                      height: 50,
-                      overflow: "hidden",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <Image
-                      src={`/core-contributors/${member.name}.webp`}
-                      width={50}
-                      height={50}
-                      className="w-full h-full object-cover"
-                      alt={member.name}
-                    />
-                  </div>
-                  <Typography className="font-bold text-sm mt-2">
-                    {member.name}
-                  </Typography>
-                  <Typography className="font-bold text-xs">
-                    {member.subtitle}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
+              </Box>
           </Box>
         </Box>
       </Box>
