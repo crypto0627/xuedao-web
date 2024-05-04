@@ -5,14 +5,14 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <Box className="relative w-full overflow-hidden bg-gradient-to-b from-hero to-hero2 py-32 sm:py-20 md:py-24 lg:py-28 xl:py-32">
+    <Box className="relative w-full overflow-hidden bg-gradient-to-b from-hero to-hero2 py-32 sm:py-20 md:py-24 lg:py-28 xl:py-20">
       <Box className="flex flex-col items-center justify-between gap-x-24 px-4 sm:flex-row sm:px-12 md:px-24 lg:px-32 xl:px-48">
         <Box className="flex flex-col">
           <Image
             src="/XueDAO_logo.png"
             alt="xuedao logo"
             className="px-6"
-            width={1000}
+            width={800}
             height={200}
             priority
           />
@@ -20,7 +20,7 @@ export function Hero() {
             src="/heroText.png"
             alt="Text"
             className="px-6"
-            width={1000}
+            width={800}
             height={200}
             priority
           />
@@ -32,7 +32,7 @@ export function Hero() {
             >
               <Button
                 variant="contained"
-                className="inline-flex h-16 w-80 sm:w-96 items-center justify-center border-4 rounded-full hover:shadow-[-18px_25px_14px_-10px_rgba(204,204,204,0.82)] hover:bg-white bg-white px-12 text-sm sm:text-lg font-bold text-black shadow focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex h-16 w-72 sm:w-96 items-center justify-center border-4 rounded-full hover:shadow-[-18px_25px_14px_-10px_rgba(204,204,204,0.82)] hover:bg-white bg-white px-12 text-sm sm:text-lg font-bold text-black shadow focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
               >
                 Join our community NOW
               </Button>

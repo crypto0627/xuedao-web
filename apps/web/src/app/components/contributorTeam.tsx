@@ -106,7 +106,7 @@ export function Contributor_Team() {
               ))}
               </Box>
           </Box>
-          <Box className="flex flex-col justify-center items-center text-center border-4 border-black p-5 xl:w-1/3 w-full h-full bg-white rounded-3xl">
+          <Box className="flex flex-col justify-center items-center text-center border-4 border-black p-2 xl:w-1/3 w-full h-full bg-white rounded-3xl">
             <Typography variant="h6">Community (C)</Typography>
             <Box className="flex flex-wrap justify-center w-full p-5 gap-5">
             {community.map((member) => (
