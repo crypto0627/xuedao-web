@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/logo.png" type="image/png" />
+        <link rel="shortcut icon" sizes="32x32" href="/XD_logo.ico" type="image/ico" />
       </head>
       <body className={roboto.className}>
         <Layout>{children}</Layout>

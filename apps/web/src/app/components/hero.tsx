@@ -9,7 +9,7 @@ export function Hero() {
       <Box className="flex flex-col items-center justify-between gap-x-24 px-4 sm:flex-row sm:px-12 md:px-24 lg:px-32 xl:px-48">
         <Box className="flex flex-col">
           <Image
-            src="/logo.png"
+            src="/XueDAO_logo.png"
             alt="xuedao logo"
             className="px-6"
             width={1000}

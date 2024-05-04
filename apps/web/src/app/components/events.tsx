@@ -52,7 +52,7 @@ export function Events() {
               We Learn!
             </Typography>
             <Typography className="max-w-[550px] text-black" align="left">
-              we host bi-weekly co-learning day which is open for everyone to
+              We host bi-weekly co-learning day which is open for everyone to
               join, also the study groups
             </Typography>
           </Grid>
@@ -80,9 +80,9 @@ export function Events() {
             style={{ height: "25%" }}
             className="pt-10"
           >
-            <Link href={"https://edux-taipei.com/"}>
-              <Button className="border-4 bg-xuedao_blue hover:shadow-[-18px_25px_14px_-10px_rgba(204,204,204,0.82)]  hover:bg-xuedao_blue rounded-xl p-1 text-xs md:text-sm lg:text-base xl:text-lg text-black font-bold h-10 xl:h-12">
-                EduX Conference Official Website
+            <Link href={"https://linktr.ee/xuedaoconnect/"}>
+              <Button className="border-4 bg-xuedao_orange hover:shadow-[-18px_25px_14px_-10px_rgba(204,204,204,0.82)] rounded-xl p-1 text-xs md:text-sm lg:text-base xl:text-lg text-black font-bold h-10 xl:h-12">
+                For More Events Information
               </Button>
             </Link>
           </Grid>
